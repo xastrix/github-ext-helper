@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "github-ext-helper",
+    "version": "1.0",
+    "description": "This extension allows you to get more information from a user's Github profile about repositories",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+    {
+        "matches": ["*://github.com/*"],
+        "js": ["js/helper.js"]
+    }
+    ],
+    "icons": {
+        "128": "icons/128x128.png"
+    },
+    "author": "xastrix",
+    "homepage_url": "https://github.com/xastrix/github-ext-helper"
+}
