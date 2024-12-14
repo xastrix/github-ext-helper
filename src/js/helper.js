@@ -65,8 +65,9 @@ async function run()
 
     function scan_repo_list()
     {
-        const ol = document.querySelector('ol.d-flex.flex-wrap.list-style-none.gutter-condensed.mb-4');
-        
+        let ol = document.querySelector('ol.d-flex.flex-wrap.list-style-none.gutter-condensed.mb-4') || 
+          document.querySelector('ol.d-flex.flex-wrap.list-style-none.gutter-condensed.mb-2.js-pinned-items-reorder-list');
+          
         if (!ol) {
             return { repo_links: [] };
         }
